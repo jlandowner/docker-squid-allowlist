@@ -10,9 +10,9 @@ spec:
     - port: 3128
       targetPort: 3128
       protocol: TCP
-      nodePort: 30000
+      nodePort: 31280
   selector:
-    name: squid
+    app: squid
 ---
 apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
 kind: Deployment
