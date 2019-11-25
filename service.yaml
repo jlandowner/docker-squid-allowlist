@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: squid
+spec:
+  type: NodePort
+  ports:
+    - port: 3128
+      targetPort: 3128
+      protocol: TCP
+      nodePort: 31280
+  selector:
+    deploy: squid
