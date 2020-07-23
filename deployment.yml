@@ -25,9 +25,9 @@ spec:
             - mountPath: /etc/squid/squid.conf
               subPath: squid.conf
               name: conf
-            - mountPath: /etc/squid/whitelist
-              subPath: whitelist
-              name: whitelist
+            - mountPath: /etc/squid/allowlist
+              subPath: allowlist
+              name: allowlist
       volumes:
         - name: data
           emptyDir: {}
@@ -37,9 +37,9 @@ spec:
             items:
               - key: squid.conf
                 path: squid.conf
-        - name: whitelist
+        - name: allowlist
           configMap:
-            name: whitelist
+            name: allowlist
             items:
-              - key: whitelist
-                path: whitelist
+              - key: allowlist
+                path: allowlist

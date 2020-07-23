@@ -11,9 +11,9 @@ data:
     # Allow HTTP queries from local networks only
     http_access allow localnet
     http_access deny !localnet
-    # Whitelist Domain configuration
-    acl whitelist dstdomain "/etc/squid/whitelist"
-    http_access allow whitelist
+    # allowlist Domain configuration
+    acl allowlist dstdomain "/etc/squid/allowlist"
+    http_access allow allowlist
     # And finally deny all other access to this proxy
     http_access deny all
     # Allow ICP queries from local networks only
